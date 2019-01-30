@@ -11,10 +11,14 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("CharacterSheet.fxml"));
+			
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("CharacterSheet.fxml"));
+			AnchorPane root = (AnchorPane)loader.load();
+			
 			Scene scene = new Scene(root,1000,1000);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
+			
 			primaryStage.setTitle("Super Simple Character Sheet");
 			primaryStage.show();
 		} catch(Exception e) {
