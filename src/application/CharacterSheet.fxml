@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="846.0" prefWidth="983.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.SampleController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="846.0" prefWidth="983.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.Controller">
   <children>
     <VBox id="VBox" alignment="TOP_CENTER" prefHeight="26.0" prefWidth="983.0" spacing="5.0" AnchorPane.bottomAnchor="820.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <children>
@@ -15,7 +15,7 @@
           <menus>
             <Menu mnemonicParsing="false" text="File">
               <items>
-                <MenuItem mnemonicParsing="false" text="Save" />
+                <MenuItem fx:id="save" mnemonicParsing="false" text="Save" />
                 <MenuItem mnemonicParsing="false" text="Load" />
                 <MenuItem mnemonicParsing="false" text="Close" />
               </items>
@@ -55,21 +55,21 @@
         <TextArea id="languages" prefWidth="200.0" wrapText="true" GridPane.columnIndex="9" GridPane.columnSpan="3" GridPane.rowIndex="1" GridPane.rowSpan="3" />
         <Label alignment="CENTER_RIGHT" prefWidth="78.0" text="Hair" GridPane.columnIndex="2" GridPane.rowIndex="3" />
         <TextField fx:id="name" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-        <TextField id="xpNext" fx:id="characterClass" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-        <TextField id="size" fx:id="level" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-        <TextField id="age" fx:id="race" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-        <TextField id="class" fx:id="subrace" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="0" />
-        <TextField id="background" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-        <TextField id="gender" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-        <TextField id="hair" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-        <TextField id="level" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="0" />
-        <TextField id="alignment" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-        <TextField id="eyes" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-        <TextField id="race" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="0" />
-        <TextField id="religion" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="1" />
-        <TextField id="weight" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="2" />
-        <TextField id="subrace" prefWidth="200.0" GridPane.columnIndex="9" GridPane.rowIndex="0" />
-        <TextField id="xp" prefWidth="200.0" GridPane.columnIndex="11" GridPane.rowIndex="0" />
+        <TextField fx:id="xpNext" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <TextField fx:id="size" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <TextField fx:id="age" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <TextField fx:id="characterClass" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+        <TextField fx:id="background" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+        <TextField fx:id="gender" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+        <TextField fx:id="hair" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+        <TextField fx:id="level" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="0" />
+        <TextField fx:id="alignment" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+        <TextField fx:id="eyes" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+        <TextField fx:id="race" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="0" />
+        <TextField fx:id="religion" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+        <TextField fx:id="weight" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+        <TextField fx:id="subrace" prefWidth="200.0" GridPane.columnIndex="9" GridPane.rowIndex="0" />
+        <TextField fx:id="xp" prefWidth="200.0" GridPane.columnIndex="11" GridPane.rowIndex="0" />
       </children>
       <columnConstraints>
         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />

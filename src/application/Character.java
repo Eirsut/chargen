@@ -8,6 +8,21 @@ public class Character  {
 	public static String name;
 	public static String characterClass;
 	public static int level;
+	public static int xp;
+	public static int xpNext;
+	public static String size;
+	public static String age;
+	public static String background;
+	public static String gender;
+	public static String alignment;
+	/*TODO: Test that TextArea and String play nice together.*/
+	public static String languages;
+	public static String hair;
+	public static String eyes;
+	public static String religion;
+	public static String weight;
+	public static String race;
+	public static String subrace;
 	
 	
 
