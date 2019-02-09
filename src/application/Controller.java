@@ -4,19 +4,23 @@ package application;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.FileChooser;
+
 import java.util.regex.*;
 
 public class Controller extends AnchorPane {
 
 	/*Controller class for the FXML file.
 	Living proof that the "don't repeat yourself" programming axiom is dead and we live in a godless wasteland of spaghetti code.*/
-	
-	
-	
+
+
+
 	@FXML private TextField name;
 	//Class too is fine as it is.
 	@FXML private TextField characterClass;
@@ -38,6 +42,9 @@ public class Controller extends AnchorPane {
 	@FXML private TextField religion;
 	@FXML private TextField weight;
 	@FXML private TextField xp;
+	@FXML private MenuItem save;
+	
+	
 
 
 
@@ -83,7 +90,7 @@ public class Controller extends AnchorPane {
 				Character.race = newVal;
 			}
 		});
-		
+
 		subrace.textProperty().addListener(new ChangeListener<String>() {
 			@Override
 			public void changed(ObservableValue<? extends String> observableVal, String oldVal, String newVal) {
@@ -124,7 +131,7 @@ public class Controller extends AnchorPane {
 				Character.size = newVal;
 			}
 		});
-		
+
 		age.textProperty().addListener(new ChangeListener<String>() {
 			@Override
 			public void changed(ObservableValue<? extends String> observableVal, String oldVal, String newVal) {
@@ -137,41 +144,54 @@ public class Controller extends AnchorPane {
 				Character.background = newVal;
 			}
 		});
-		
+
 		languages.textProperty().addListener(new ChangeListener<String>() {
 			@Override
 			public void changed(ObservableValue<? extends String> observableVal, String oldVal, String newVal) {
 				Character.languages = newVal;
 			}
 		});
-		
+
 		gender.textProperty().addListener(new ChangeListener<String>() {
 			@Override
 			public void changed(ObservableValue<? extends String> observableVal, String oldVal, String newVal) {
 				Character.gender = newVal;
 			}
 		});
-		
+
 		hair.textProperty().addListener(new ChangeListener<String>() {
 			@Override
 			public void changed(ObservableValue<? extends String> observableVal, String oldVal, String newVal) {
 				Character.hair = newVal;
 			}
 		});
-		
+
 		alignment.textProperty().addListener(new ChangeListener<String>() {
 			@Override
 			public void changed(ObservableValue<? extends String> observableVal, String oldVal, String newVal) {
 				Character.alignment = newVal;
 			}
 		});
-		
+
 		eyes.textProperty().addListener(new ChangeListener<String>() {
 			@Override
 			public void changed(ObservableValue<? extends String> observableVal, String oldVal, String newVal) {
 				Character.eyes = newVal;
 			}
 		});
+
+		save.setOnAction(new EventHandler<ActionEvent>() {
+
+			@Override
+			public void handle(ActionEvent e) {
+				// TODO Open up a save file selector - remember to set the correct file extension filter once that's been decided on.
+				FileChooser fileChooser = new FileChooser();
+				
+
+			}	
+		}
+				);
+
 	}
 
 }
